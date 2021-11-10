@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-<div class="bg-white p-2 w-full">
+<div class="bg-white p-2 w-full border-t-1 text-center">
     {{props.item}}
 </div>
 </template>
