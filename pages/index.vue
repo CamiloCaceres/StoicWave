@@ -13,23 +13,24 @@ const addItem = () => {
 </script>
 
 <template>
-    <div class="h-screen bg-[#E7D4B7]">
-        <div class="bg-[#926A2F] max-w-3xl h-full mx-auto flex flex-col items-center">
-            <h1 class="p-5 text-5xl text-center text-white font-semibold tracking-tight">StoicWave</h1>
+    <div class="h-screen bg-[#49257F] font-mono">
+        <img class="absolute bottom-1 right-1 filter saturate-150" src="https://i.imgur.com/Owuze4P.png" alt="">
+        <div class="bg-gradient-to-b from-rose-500 via-fuchsia-600 to-indigo-500 max-w-3xl h-full mx-auto flex flex-col items-center">
+            <h1 class="p-5 text-5xl text-center text-white font-semibold tracking-widest">StoicWave</h1>
             <h3 class="text-white">Feeling worried? Overwhelmed? Overthinking?</h3>
             <h3 class="text-white">Let's start by writting all our worries down</h3>
             <div class="w-1/2 flex">
                 <input
                     v-model="newItem"
                     autocomplete="off"
-                    class="input[type='text'] w-full rounded-md focus:ring-[#E7D4B7] focus:border-[#E7D4B7]"
+                    class="input[type='text'] w-full rounded-md focus:ring-[#DD517E] focus:border-[#DD517E]"
                     type="text"
                     name="item"
                     id="item"
                     @keypress.enter="addItem"
                 />
                 <button
-                    class="button[type='submit'] bg-transparent text-white px-2 rounded-md focus:outline-none focus:text-[#E7D4B7]"
+                    class="button[type='submit'] bg-transparent text-white px-2 rounded-md focus:outline-none focus:text-[#DD517E]"
                     @click="addItem"
                 >
                     <svg
