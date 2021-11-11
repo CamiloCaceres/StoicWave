@@ -1,7 +1,9 @@
 <script setup>
 </script>
 <template>
-    <div class="h-8 w-full bg-gradient-to-bl from-purple-600 to-purple-400 flex flex-row-reverse items-center">
+    <div class="h-8 w-full bg-gradient-to-bl from-purple-600 to-purple-400 flex justify-between items-center">
+        <h3 class="text-gray-300 px-2">stoic_wave.exe</h3>
+        <div class="flex">
         <div class="border-2 bg-gray-300 border-gray-500 mr-1">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -49,6 +51,7 @@
             >
                 <path d="M20 14H4v-4h16" fill="currentColor" />
             </svg>
+        </div>
         </div>
     </div>
 </template>
