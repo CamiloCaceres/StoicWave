@@ -1,4 +1,7 @@
 {
+  "author": {
+    "name": "Camilo Caceres",
+    "email": "camiloac97@gmail.com"},
   "private": true,
   "scripts": {
     "dev": "nuxi dev",

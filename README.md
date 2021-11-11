@@ -1,29 +1,6 @@
-# Nuxt 3 Minimal Starter
+# Stoic Wave
+An app for stoic practice
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
+Built with Nuxt3, WindiCSS. Deployed to Vercel
 
-## Setup
-
-Make sure to install the dependencies
-
-```bash
-yarn install
-```
-
-## Development
-
-Start the development server on http://localhost:3000
-
-```bash
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+Web development and design by Camilo Caceres
