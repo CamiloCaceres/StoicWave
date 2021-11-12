@@ -13,8 +13,7 @@ const newItem = ref('')
 </script>
 
 <template>
-    <div class="max-w-4xl pb-10 bg-gray-300 mx-auto flex flex-col items-center relative">
-        <WindowBar />
+    <Window>
         <h1 class="p-5 text-5xl text-center font-semibold tracking-widest">Stoic_Wave</h1>
         <h3 class>Feeling worried? Overwhelmed? Overthinking?</h3>
         <h3 class>Let's start by writting your worries down</h3>
@@ -59,7 +58,8 @@ const newItem = ref('')
         <div v-if="store.items.length != 0" class="w-7/12 mt-7">
             <div class="flex justify-between items-start">
                 <h1 class="text-lg self-start p-2">Things that worry me now</h1>
-                <NuxtLink to="/control/question"
+                <NuxtLink
+                    to="/control/question"
                     class="px-2 py-1 rounded bg-purple-700 text-white text-lg mb-2 mr-10 font-medium w-min place-self-end"
                 >next</NuxtLink>
             </div>
@@ -85,5 +85,5 @@ const newItem = ref('')
                 <path d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8h5z" fill="currentColor" />
             </svg>
         </NuxtLink>
-    </div>
+    </Window>
 </template>
