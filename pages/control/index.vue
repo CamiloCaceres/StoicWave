@@ -59,9 +59,9 @@ const newItem = ref('')
         <div v-if="store.items.length != 0" class="w-7/12 mt-7">
             <div class="flex justify-between items-start">
                 <h1 class="text-lg self-start p-2">Things that worry me now</h1>
-                <button
+                <NuxtLink to="/control/question"
                     class="px-2 py-1 rounded bg-purple-700 text-white text-lg mb-2 mr-10 font-medium w-min place-self-end"
-                >next</button>
+                >next</NuxtLink>
             </div>
             <div class="bg-white font-semi text-lg p-1 rounded-md">
                 <div class v-for="item in store.items">
@@ -69,6 +69,7 @@ const newItem = ref('')
                 </div>
             </div>
         </div>
+        <!-- home button -->
         <NuxtLink to="/">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
