@@ -1,7 +1,8 @@
 {
   "author": {
     "name": "Camilo Caceres",
-    "email": "camiloac97@gmail.com"},
+    "email": "camiloac97@gmail.com"
+  },
   "private": true,
   "scripts": {
     "dev": "nuxi dev",
@@ -11,5 +12,10 @@
   "devDependencies": {
     "nuxt-windicss": "^2.0.12",
     "nuxt3": "latest"
+  },
+  "dependencies": {
+    "@nuxtjs/composition-api": "^0.30.0",
+    "@pinia/nuxt": "^0.1.5",
+    "pinia": "^2.0.3"
   }
 }
