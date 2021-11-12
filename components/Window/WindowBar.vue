@@ -1,5 +1,3 @@
-<script setup>
-</script>
 <template>
     <div class="h-8 w-full bg-gradient-to-bl from-purple-600 to-purple-400 flex justify-between items-center">
         <h3 class="text-gray-300 px-2">stoic_wave.exe</h3>

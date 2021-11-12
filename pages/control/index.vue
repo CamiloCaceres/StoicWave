@@ -69,21 +69,6 @@ const newItem = ref('')
                 </div>
             </div>
         </div>
-        <!-- home button -->
-        <NuxtLink to="/">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                class="absolute top-10 left-2"
-                width="32"
-                height="32"
-                preserveAspectRatio="xMidYMid meet"
-                viewBox="0 0 24 24"
-            >
-                <path d="M10 20v-6h4v6h5v-8h3L12 3L2 12h3v8h5z" fill="currentColor" />
-            </svg>
-        </NuxtLink>
+     
     </Window>
 </template>
