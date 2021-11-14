@@ -16,7 +16,7 @@ const addItem = () => {
     <Window>
         <h1 class="p-5 text-5xl text-center font-semibold tracking-widest">Stoic_Wave</h1>
         <NuxtLink
-            class="px-2 py-1 rounded bg-purple-700 text-white text-lg mb-2 mr-10 font-medium w-min place-self-end"
+            class="bg-gray-300 btn btn-primary"
             to="/control"
         >control</NuxtLink>
     </Window>

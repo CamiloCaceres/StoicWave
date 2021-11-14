@@ -11,7 +11,7 @@ const isHome = computed(() => {
 
 </script>
 <template>
-    <div class="max-w-4xl pb-10 bg-gray-300 mx-auto flex flex-col items-center relative">
+    <div class=" max-w-sm mx-4 lg:max-w-3xl md:mx-auto pb-10 bg-gray-300 flex flex-col items-center relative">
         <WindowBar />
            <!-- home button -->
         <NuxtLink v-if="!isHome" to="/">
