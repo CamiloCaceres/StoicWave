@@ -1,7 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useList } from '~~/stores/List';
-const store = useList()
+import { useControlStore } from '~~/stores/controlStore';
+
+const store = useControlStore()
+const newItemInput = ref<HTMLElement>()
+
 function addItem() {
     if (newItem.value) {
         store.addItem(newItem.value)
@@ -9,6 +12,11 @@ function addItem() {
     }
 }
 const newItem = ref('')
+const reset = () => {
+    store.reset()
+    newItem.value = ''
+    if (newItemInput.value) { newItemInput.value.focus() }
+}
 
 </script>
 
@@ -20,6 +28,7 @@ const newItem = ref('')
         <div class="w-full px-6 lg:w-1/2 mt-4">
             <div class="flex">
                 <input
+                    ref="newItemInput"
                     v-model="newItem"
                     autocomplete="off"
                     class="input[type='text'] w-full focus:border-violet-400"
@@ -48,22 +57,17 @@ const newItem = ref('')
                 </button>
             </div>
             <div class="flex justify-end space-x-3 mt-3 mr-2">
-                <button
-                    class="btn btn-secondary"
-                >Reset</button>
+                <button @click="reset" class="btn btn-secondary">Reset</button>
 
-                <NuxtLink
-                    to="/control/question"
-                    class="btn btn-primary"
-                >Done</NuxtLink>
+                <NuxtLink to="/control/question" class="btn btn-primary">Done</NuxtLink>
             </div>
         </div>
-        <div v-if="store.items.length != 0" class="w-full md:w-10/12 px-4 mt-7">
+        <div v-if="store.inputList.length != 0" class="w-full md:w-10/12 px-4 mt-7">
             <div class="flex justify-between items-start">
                 <h1 class="md:text-lg self-start p-2">Things that worry me now</h1>
             </div>
             <div class="bg-white font-semi md:text-lg p-1 rounded-md">
-                <ListItem class="last:border-b-0" v-for="item in store.items" :item="item" />
+                <ListItem class="last:border-b-0" v-for="item in store.inputList" :item="item" />
             </div>
         </div>
     </Window>

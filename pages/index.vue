@@ -1,15 +1,5 @@
 <script setup lang="ts">
-import { ref, reactive } from 'vue'
-const newItem = ref('')
-const items = reactive<String[]>([])
 
-const addItem = () => {
-    if (newItem.value) {
-        items.push(newItem.value)
-        newItem.value = ''
-    }
-
-}
 </script>
 
 <template>
