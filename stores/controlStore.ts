@@ -16,12 +16,15 @@ export const useControlStore = defineStore('control', () => {
     function reset() {
         inputList.length = 0
     }
-
-
-    return {
-        inputList,
-        outuputList,
-        addItem,
-        reset
+    const addOutputItem = (name: string, canControl: boolean) => {
+        outuputList.push({ name, canControl })
     }
-})
+
+        return {
+            inputList,
+            outuputList,
+            addItem,
+            reset,
+            addOutputItem
+        }
+    })

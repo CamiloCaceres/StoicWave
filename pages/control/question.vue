@@ -6,7 +6,10 @@ const store = useControlStore()
 const inputList = store.inputList
 
 const currentItem = ref(0)
-
+const handleClick = (canControl: boolean) =>{
+    store.addOutputItem(inputList[currentItem.value], canControl)
+    currentItem.value++
+}
 const pageState = ref('instructions')
 
 
@@ -26,9 +29,9 @@ const pageState = ref('instructions')
         </div>
        <div v-if="pageState === 'showItems'" class="flex flex-col">
            <div class="flex ">
-               <button class="btn btn-primary">yes</button>
+               <button @click="handleClick(true)" class="btn btn-primary">yes</button>
                <p>{{ inputList[currentItem] }}</p>
-                <button>no</button>
+                <button @click="handleClick(false)">no</button>
            </div> 
        </div>
     </Window>
